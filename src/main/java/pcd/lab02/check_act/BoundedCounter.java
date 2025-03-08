@@ -19,7 +19,7 @@ public class BoundedCounter {
 		}
 	}
 
-	public  void dec() throws UnderflowException {
+	public void dec() throws UnderflowException {
 		synchronized (this){
 			if (cont - 1 < min){
 				throw new UnderflowException();
@@ -28,7 +28,7 @@ public class BoundedCounter {
 		}
 	}
 	
-	public  int getValue(){
+	public int getValue(){
 		synchronized (this){
 			return cont;
 		}
